@@ -20,6 +20,13 @@ def Division(x, y):
         return print(f"division of {x} and {y} is {div}")
     except ZeroDivisionError:
         return "Error! Division by zero is not allowed. Zero Division Error Occured"
+    
+def Modulus(x, y):
+    mod = x % y
+    try:
+        return print(f"Modulus of {x} and {y} is {mod}")
+    except ZeroDivisionError:
+        return "Error! Division by zero is not allowed. Zero Division Error Occured"
 
 
 # Main function
@@ -30,9 +37,10 @@ def calculator():
     print("2. Subtraction")
     print("3. Multiplication")
     print("4. Division")
+    print("5. Modulus")
 
     # Take user input for operation
-    choice = input("Enter choice (1 Or 2 OR 3 Or 4): ")
+    choice = input("Enter choice (1 to 5): ")
 
     # Take user input for numbers
     num1 = float(input("Enter first number: "))
@@ -47,6 +55,8 @@ def calculator():
         Multiplication(num1, num2)
     elif choice == "4":
         Division(num1, num2)
+    elif choice == "5":
+        Modulus(num1, num2)
     else:
         print("Invalid input. Please select a valid operation (1 OR 2 Or 3).")
 
